@@ -1,0 +1,10 @@
+header {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  padding: 14px 89px 14px 89px;
+}
+header img {
+  width: 100%;
+  height: 100%;
+}
