@@ -1,12 +1,99 @@
 header {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 14px 89px 14px 89px;
+  align-items: center;
 }
 header img {
-  width: 100%;
-  height: 100%;
+  transform: scale(0.4);
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding: 20px 35px 50px;
+  background-color: #F6F6F6;
+}
+.introduction .intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduction .intro-text .intro-text-1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.introduction .intro-text .intro-text-2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0px;
+  text-align: center;
+}
+.introduction .explore-button {
+  border-radius: 35px;
+  padding: 0px 20px;
+  border: none;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.introduction .explore-button p {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.small-circle {
+  position: relative;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.small-circle p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.functionning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 20px 60px;
+}
+.functionning .functionning-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.functionning .functionning-options .option {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 27px;
+  width: 332px;
+  height: 72px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -14,9 +101,19 @@ header img {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin: 0px;
+}
+
+.location-div {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+.location-div p {
+  font-weight: 500;
 }
