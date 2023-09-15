@@ -1,0 +1,15 @@
+.header-restaurants {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-restaurants .back-button {
+  transform: scale(2);
+  padding-left: 25px;
+}
+.header-restaurants .logo-top {
+  transform: scale(0.4);
+  justify-self: center;
+}

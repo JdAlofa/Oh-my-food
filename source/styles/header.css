@@ -1,10 +1,10 @@
-header {
+.header-homepage {
   background-color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header img {
+.header-homepage img {
   transform: scale(0.4);
 }

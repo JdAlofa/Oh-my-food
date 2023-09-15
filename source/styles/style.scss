@@ -1,7 +1,10 @@
 @import "./header";
+@import "./header-restaurants";
+@import "./restaurants-menu";
 @import "./introduction";
 @import "./functionning.scss";
 @import "./restaurants.scss";
+@import "./footer.scss";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -11,6 +14,8 @@ body {
   background-color: #ffffff;
   width: 100%;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .location-div {
@@ -24,4 +29,9 @@ body {
   p {
     font-weight: 500;
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -16,7 +16,32 @@
   width: 100%;
 }
 
+.nouveau {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 29px;
+  flex-shrink: 0;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #99e2d0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.nouveau span {
+  color: #008766;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
