@@ -1,18 +1,19 @@
 .header-restaurants {
+  position: relative;
   background-color: #ffffff;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   .back-button {
+    position: absolute;
     transform: scale(2);
-    padding-left: 25px;
-    // justify-self: flex-start;
-  }
+    left : 5%;
+bottom: 30%;  }
   .logo-top {
     transform: scale(0.4);  
-    justify-self: center;
 
   }
 }

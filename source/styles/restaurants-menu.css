@@ -14,6 +14,15 @@
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   margin-top: -50px;
+  align-self: center;
+}
+@media (min-width: 501px) {
+  .restaurant-menu {
+    margin: -50px 190px 0px 190px;
+    padding-left: 210px;
+    padding-right: 210px;
+    width: 50%;
+  }
 }
 .restaurant-menu .restaurant-menu-title {
   display: flex;
@@ -21,6 +30,15 @@
   gap: 35px;
   align-items: center;
   justify-content: center;
+}
+.restaurant-menu .restaurant-menu-title .like {
+  flex-shrink: 0;
+  width: 22px;
+  height: 21px;
+}
+.restaurant-menu .restaurant-menu-title .like:hover {
+  cursor: pointer;
+  fill: pink;
 }
 .restaurant-menu .restaurant-menu-title p {
   color: var(--Black, #101010);
@@ -53,29 +71,61 @@
 .menu-cards p {
   margin: 0px;
 }
-.menu-cards .menu-card {
-  width: 95%;
+.menu-cards .menu-card-selected {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.menu-cards .menu-card-selected svg {
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  height: 84px;
+}
+
+.menu-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 19px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   padding: 15px;
+  transform-origin: 0% 50%;
+  transition: transform 500ms ease-in-out, border-radius 500ms ease-in-out;
 }
-.menu-cards .menu-card .menu-card-title {
-  overflow: hidden;
+.menu-card:hover {
+  transform: scaleX(0.85);
+  border-radius: 19px 0px 0px 19px;
+}
+@media (min-width: 501px) {
+  .menu-card:hover {
+    transform: scaleX(0.899);
+    border-radius: 19px 0px 0px 19px;
+  }
+}
+.menu-card .menu-card-title {
   text-overflow: ellipsis;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
+  overflow: hidden;
+  transition: transform;
+  transform-origin: 0% 50%;
 }
-.menu-cards .menu-card .menu-card-info {
+.menu-card .menu-card-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
 }
-.menu-cards .menu-card .menu-card-info .menu-card-price {
+.menu-card .menu-card-info .menu-card-price {
   color: #000;
   font-family: Roboto;
   font-size: 18px;
@@ -88,9 +138,16 @@
   justify-self: center;
   border-radius: 35px;
   padding: 0px 20px;
+  margin-bottom: 50px;
   border: none;
+  filter: opacity(1);
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 300ms ease;
+}
+.commander-button:hover {
+  filter: opacity(0.85);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 .commander-button p {
   color: #fff;
