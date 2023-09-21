@@ -76,7 +76,7 @@
   }
 
   .menu-card-selected {
-    z-index: 3;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -96,27 +96,29 @@
       transform: translateX(-100%);
     }
 
+    &:hover .menu-card-title {
+      transform: scale(1);
+    }
 
 }
 
 .svg {
-  position: relative;
+  position: absolute;
   right: -74px;
-  z-index: 1;
   width: 74px;
   height: 84px;
   transition: transform 500ms ease-in-out;
-}
-svg {
-  width: auto;
-  height: 84px;
+
+  svg {
+    width: auto;
+    height: 84px;
+  }
 }
 
 
 }
 .menu-card {
   position: relative;
-  z-index: 2;
   width: 100%;
   height: 100%;
   display: flex;
@@ -133,7 +135,7 @@ svg {
   @media(min-width: 501px) {
     
     &:hover {
-      transform: scaleX(0.899);
+      transform: scaleX(0.89);
       border-radius: 19px 0px 0px 19px;
     }
   }
@@ -144,8 +146,8 @@ svg {
     font-style: normal;
     font-weight: 500;
     overflow: hidden;
+    transform: scale(1);
     transition: transform;
-    transform-origin: 0% 50%;
   }
 
   .menu-card-info {
