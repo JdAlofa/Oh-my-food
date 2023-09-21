@@ -76,19 +76,43 @@
   }
 
   .menu-card-selected {
+    z-index: 3;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 19px;
 
-    svg {
-      position: absolute;
-      z-index: 1;
-      width: auto;
-      height: 84px;
+
+    &:hover .menu-card {
+      transform: scaleX(0.85);
+      border-radius: 19px 0px 0px 19px;
     }
-  }
+  
+    &:hover .svg {
+      transform: translateX(-100%);
+    }
+
+
+}
+
+.svg {
+  position: relative;
+  right: -74px;
+  z-index: 1;
+  width: 74px;
+  height: 84px;
+  transition: transform 500ms ease-in-out;
+}
+svg {
+  width: auto;
+  height: 84px;
+}
+
+
 }
 .menu-card {
   position: relative;
@@ -105,10 +129,6 @@
   transform-origin: 0% 50%;
   transition: transform 500ms ease-in-out, border-radius 500ms ease-in-out;
 
-  &:hover {
-    transform: scaleX(0.85);
-    border-radius: 19px 0px 0px 19px;
-  }
 
   @media(min-width: 501px) {
     
