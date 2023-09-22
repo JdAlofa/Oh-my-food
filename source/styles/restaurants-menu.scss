@@ -76,23 +76,49 @@
   }
 
   .menu-card-selected {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 19px;
 
-    svg {
-      position: absolute;
-      z-index: 1;
-      width: auto;
-      height: 84px;
+
+    &:hover .menu-card {
+      transform: scaleX(0.85);
+      border-radius: 19px 0px 0px 19px;
     }
+  
+    &:hover .svg {
+      transform: translateX(-100%);
+    }
+
+    &:hover .menu-card-title {
+      transform: scale(1);
+    }
+
+}
+
+.svg {
+  position: absolute;
+  right: -74px;
+  width: 74px;
+  height: 84px;
+  transition: transform 500ms ease-in-out;
+
+  svg {
+    width: auto;
+    height: 84px;
   }
+}
+
+
 }
 .menu-card {
   position: relative;
-  z-index: 2;
   width: 100%;
   height: 100%;
   display: flex;
@@ -105,15 +131,11 @@
   transform-origin: 0% 50%;
   transition: transform 500ms ease-in-out, border-radius 500ms ease-in-out;
 
-  &:hover {
-    transform: scaleX(0.85);
-    border-radius: 19px 0px 0px 19px;
-  }
 
   @media(min-width: 501px) {
     
     &:hover {
-      transform: scaleX(0.899);
+      transform: scaleX(0.89);
       border-radius: 19px 0px 0px 19px;
     }
   }
@@ -124,8 +146,8 @@
     font-style: normal;
     font-weight: 500;
     overflow: hidden;
+    transform: scale(1);
     transition: transform;
-    transform-origin: 0% 50%;
   }
 
   .menu-card-info {
