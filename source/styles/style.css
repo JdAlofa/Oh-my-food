@@ -116,18 +116,30 @@
   transform: scaleX(0.85);
   border-radius: 19px 0px 0px 19px;
 }
+@media (min-width: 501px) {
+  .menu-cards .menu-card-selected:hover .menu-card {
+    transform: scaleX(0.9);
+    border-radius: 19px 0px 0px 19px;
+  }
+}
 .menu-cards .menu-card-selected:hover .svg {
   transform: translateX(-100%);
 }
 .menu-cards .menu-card-selected:hover .menu-card-title {
-  transform: scale(1);
+  transform: scaleX(1.2);
+}
+.menu-cards .menu-card-selected:hover .menu-card-info p {
+  transform: scaleX(1.2);
+}
+.menu-cards .menu-card-selected:hover .menu-card-price {
+  transform: scaleX(1.15);
 }
 .menu-cards .svg {
   position: absolute;
   right: -74px;
   width: 74px;
   height: 84px;
-  transition: transform 500ms ease-in-out;
+  transition: transform 400ms linear;
 }
 .menu-cards .svg svg {
   width: auto;
@@ -146,13 +158,7 @@
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   padding: 15px;
   transform-origin: 0% 50%;
-  transition: transform 500ms ease-in-out, border-radius 500ms ease-in-out;
-}
-@media (min-width: 501px) {
-  .menu-card:hover {
-    transform: scaleX(0.89);
-    border-radius: 19px 0px 0px 19px;
-  }
+  transition: transform 400ms linear, border-radius 400ms linear;
 }
 .menu-card .menu-card-title {
   text-overflow: ellipsis;
@@ -160,14 +166,21 @@
   font-style: normal;
   font-weight: 500;
   overflow: hidden;
-  transform: scale(1);
-  transition: transform;
+  white-space: nowrap;
+  transform-origin: 0% 50%;
+  transition: transform 0.4s linear;
 }
 .menu-card .menu-card-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+  transform-origin: 0% 50%;
+  transition: transform 0.4s linear;
+}
+.menu-card .menu-card-info p {
+  transform-origin: 0% 50%;
+  transition: transform 0.4s linear;
 }
 .menu-card .menu-card-info .menu-card-price {
   color: #000;
@@ -175,6 +188,8 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
+  transform-origin: 100% 50%;
+  transition: transform 0.4s linear;
 }
 
 .commander-button {
@@ -473,9 +488,9 @@ footer .footer-links a {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 100%;
-  margin: 0px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
