@@ -111,6 +111,7 @@
   height: 100%;
   overflow: hidden;
   border-radius: 19px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .menu-cards .menu-card-selected:hover .menu-card {
   transform: scaleX(0.85);
@@ -126,17 +127,17 @@
   transform: translateX(-100%);
 }
 .menu-cards .menu-card-selected:hover .menu-card-title {
-  transform: scaleX(1.2);
+  transform: scaleX(1.15);
 }
 .menu-cards .menu-card-selected:hover .menu-card-info p {
-  transform: scaleX(1.2);
+  transform: scaleX(1.15);
 }
 .menu-cards .menu-card-selected:hover .menu-card-price {
   transform: scaleX(1.15);
 }
 .menu-cards .svg {
   position: absolute;
-  right: -74px;
+  right: -76px;
   width: 74px;
   height: 84px;
   transition: transform 400ms linear;
@@ -155,7 +156,6 @@
   gap: 10px;
   background-color: #fff;
   border-radius: 19px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   padding: 15px;
   transform-origin: 0% 50%;
   transition: transform 400ms linear, border-radius 400ms linear;
